@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us Page-new</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+    <!-- contactUs Services Scetion -->
+    <div class="contactUs">
+        <div class="title">
+            <h2>No Name</h2>
+        </div>
+        <div class="box">
+            <!-- Form Scetion -->
+            <div class="contact form">
+                <h1>Our pictures</h1>
+                <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Masonry Layout con CSS Grid</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h3>Take a Look</h3>
+
+    <div class="gallery" id="gallery">
+        <div class="gallery-item">
+            <div class="content"><img src="https://source.unsplash.com/random/?tech,care" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="https://source.unsplash.com/random/?tech,studied" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="https://source.unsplash.com/random/?tech,substance" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="https://source.unsplash.com/random/?tech,choose" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="https://source.unsplash.com/random/?tech,past" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="https://source.unsplash.com/random/?tech,lamp" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="https://source.unsplash.com/random/?tech,yet" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="https://source.unsplash.com/random/?tech,eight" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="https://source.unsplash.com/random/?tech,crew" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="https://source.unsplash.com/random/?tech,event" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="https://source.unsplash.com/random/?tech,instrument" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="https://source.unsplash.com/random/?tech,practical" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="https://source.unsplash.com/random/?tech,pass" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="https://source.unsplash.com/random/?tech,bigger" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="https://source.unsplash.com/random/?tech,number" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="https://source.unsplash.com/random/?tech,feature" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="https://source.unsplash.com/random/?tech,line" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="https://source.unsplash.com/random/?tech,railroad" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="https://source.unsplash.com/random/?tech,pride" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="https://source.unsplash.com/random/?tech,too" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="https://source.unsplash.com/random/?tech,bottle" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="https://source.unsplash.com/random/?tech,base" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="https://source.unsplash.com/random/?tech,cell" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="https://source.unsplash.com/random/?tech,bag" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="https://source.unsplash.com/random/?tech,card" alt=""></div>
+        </div>
+    </div>
+     
+</body>
+<script src="script.js"></script>
+<script>
+    var gallery = document.querySelector('#gallery');
+var getVal = function (elem, style) { return parseInt(window.getComputedStyle(elem).getPropertyValue(style)); };
+var getHeight = function (item) { return item.querySelector('.content').getBoundingClientRect().height; };
+var resizeAll = function () {
+    var altura = getVal(gallery, 'grid-auto-rows');
+    var gap = getVal(gallery, 'grid-row-gap');
+    gallery.querySelectorAll('.gallery-item').forEach(function (item) {
+        var el = item;
+        el.style.gridRowEnd = "span " + Math.ceil((getHeight(item) + gap) / (altura + gap));
+    });
+};
+gallery.querySelectorAll('img').forEach(function (item) {
+    item.classList.add('byebye');
+    if (item.complete) {
+        console.log(item.src);
+    }
+    else {
+        item.addEventListener('load', function () {
+            var altura = getVal(gallery, 'grid-auto-rows');
+            var gap = getVal(gallery, 'grid-row-gap');
+            var gitem = item.parentElement.parentElement;
+            gitem.style.gridRowEnd = "span " + Math.ceil((getHeight(gitem) + gap) / (altura + gap));
+            item.classList.remove('byebye');
+        });
+    }
+});
+window.addEventListener('resize', resizeAll);
+gallery.querySelectorAll('.gallery-item').forEach(function (item) {
+    item.addEventListener('click', function () {        
+        item.classList.toggle('full');        
+    });
+});
+
+</script>
+</html>                 
+            </div>
+
+            <!-- info Box Scetion -->
+            <div class="contact info">
+                <h3>Constact Infos</h3>
+                <div class="infoBox">
+                    <div>
+                        <span><ion-icon name="location"></ion-icon></span>
+                        <p>Capital city, Berlin <br>Germany</p>
+                    </div>
+                    <div>
+                        <span><ion-icon name="mail"></ion-icon></span>
+                        <a href="mailto:loremipsum@gmail.com">loremipsum@gmail.com</a>
+                    </div>
+                    <div>
+                        <span><ion-icon name="call"></ion-icon></span>
+                        <a href="tel:+919876543210">+91 987 654 3210</a>
+                    </div>
+                    <!-- Social Media Link Scetion -->
+                    <ul class="sci">
+                        <li><a href="#"><ion-icon name="logo-facebook"></ion-icon></a></li>
+                        <li><a href="#"><ion-icon name="logo-twitter"></ion-icon></a></li>
+                        <li><a href="#"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+                        <li><a href="#"><ion-icon name="logo-instagram"></ion-icon></a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Map Scetion -->
+            <div class="contact map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d38832.16758517694!2d13.330336801715488!3d52.5332446690328!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a851dd8abc4201%3A0x52120465b5fabc0!2sMitte%2C%20Berlin!5e0!3m2!1sde!2sde!4v1633885958315!5m2!1sde!2sde" style="border:0;" allowfullscreen="" loading="lazy"></iframe> 
+            </div>
+        </div>
+    </div>
+</body>
+</html>
