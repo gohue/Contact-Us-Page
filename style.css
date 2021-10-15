@@ -30,6 +30,14 @@ body{
     font-weight: 500;
     cursor: context-menu;
 }
+.made{
+   color: #fff;
+   font-size: 13px;
+   text-align: center; 
+   padding: 10px 0px;
+   font-weight: 100;
+   cursor: context-menu;
+}
 .form{
     grid-area: form;
 }
